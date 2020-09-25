@@ -1,0 +1,13 @@
+{
+  "extedns": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "commonjs",
+    "types": ["jest"],
+    "composite": true,
+    "esModuleInterop": true,
+    "declaration": true
+  },
+  "include": ["./src/*"]
+}

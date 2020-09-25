@@ -1,0 +1,24 @@
+{
+  "name": "nissix-plugins",
+  "version": "1.0.0",
+  "description": "Nissix's plugins for scaleable coding",
+  "main": "dist/index.js",
+  "types": "dist/types",
+  "repository": "git@github.com:deanshub/nissix-plugins.git",
+  "author": "Dean Shub <deanshub@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "test": "lerna run test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
+}

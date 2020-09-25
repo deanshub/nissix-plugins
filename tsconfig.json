@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "esnext",
+    "module": "commonjs",
+    "composite": true,
+    "moduleResolution": "node",
+    "types": ["jest"],
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true
+  },
+  "paths": {
+    "@nissix/plugins/*": ["./packages/plugins/src/*"],
+    "@nissix/plugins": ["./packages/plugins/src/index"],
+  }
+}
