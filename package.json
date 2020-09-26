@@ -11,11 +11,12 @@
     "postinstall": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "lint":"eslint"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "eslint": "^7.9.0",
     "husky": "^4.3.0",
     "lerna": "^3.22.1",
     "prettier": "^2.1.2",
