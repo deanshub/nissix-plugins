@@ -17,3 +17,8 @@ export async function execute() {
     }),
   )
 }
+
+// TODO: this will export a manifest for options that will show to the user and be consumed in execute
+// export async function getOptions() {
+//
+// }
