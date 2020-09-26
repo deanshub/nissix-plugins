@@ -69,11 +69,6 @@ export async function getPackages(projectDir: string = process.cwd()) {
             cwd: projectDir,
         },
     )
-    // const lernaPath =  paths.find(x=>x.includes('lerna.json'))
-    // if (lernaPath){
-    //     const lernaContent = await fs.readJson(lernaPath)
-    //     lernaContent.packages.flatmap(pkgPath=>pkgPath.endsWith('*')?:`${pkgPath}/package.json`)
-    // }
     return Promise.all(
         paths.map(async (pkgJsonPath) => {
             const pkgPath = path.dirname(pkgJsonPath)
