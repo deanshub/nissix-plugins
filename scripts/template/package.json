@@ -1,0 +1,12 @@
+{
+  "name": "nissix-__name__",
+  "version": "1.0.0",
+  "description": "A plugin for Nissix called __name__",
+  "main": "dist/index.js",
+  "bin": "bin.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "bin": "echo \"starting __name__\" && exit 1"
+  }
+}
