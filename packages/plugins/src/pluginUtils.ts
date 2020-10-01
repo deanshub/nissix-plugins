@@ -4,9 +4,11 @@ import hasYarn from 'has-yarn'
 import fs from 'fs-extra'
 import globby from 'globby'
 import readPkg from 'read-pkg'
+import typeFest from 'type-fest';
 
 type DependencyType = 'production' | 'development' | 'peer'
 type DependencyTypeFlag = '' | ' -D' | ' -P'
+type DependenciesType = typeFest.PackageJson.Dependency & { [key: string]: string }
 
 export interface File {
     path: string
@@ -81,4 +83,21 @@ export async function getPackages(projectDir: string = process.cwd()) {
             return { content: pkg, path: pkgPath }
         }),
     )
+}
+
+/**
+checks if a package exists in given dependencies
+
+@param dependencies - a dependencies collection or an array of dependencies collection to search
+@param packageName - the package's name which is searched for
+
+*/
+export function isPackageInstalled(dependencies: DependenciesType | DependenciesType[], packageName: string) {
+  if (!Array.isArray(dependencies)) {
+    return dependencies?.hasOwnProperty(packageName);
+  }
+
+  return dependencies.reduce(function (prev, acc) {
+    return prev || acc?.hasOwnProperty(packageName);
+  }, false);
 }

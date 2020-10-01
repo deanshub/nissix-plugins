@@ -19,7 +19,8 @@
     "has-yarn": "^2.1.0",
     "js-yaml": "^3.14.0",
     "path": "^0.12.7",
-    "read-pkg": "^5.2.0"
+    "read-pkg": "^5.2.0",
+    "type-fest": "^0.17.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",

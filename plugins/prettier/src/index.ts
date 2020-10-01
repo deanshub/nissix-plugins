@@ -1,13 +1,18 @@
-import { addDependecies, getPackages, run } from '@nissix/plugins'
+import {
+  addDependecies,
+  getPackages,
+  run,
+  isPackageInstalled,
+} from '@nissix/plugins'
 
 export async function execute() {
   // get all packages in repo
   const packages = await getPackages()
   // check if prettier is already installed
   await Promise.all(
-    packages.map(async (pkg) => {
+    packages.map(async pkg => {
       // if not
-      if (!pkg.content?.devDependencies?.hasOwnProperty('prettier')) {
+      if (!isPackageInstalled(pkg.content?.devDependencies, 'prettier')) {
         // install prettier as dev dep
         await addDependecies(['prettier'], 'development')
       }
