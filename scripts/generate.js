@@ -8,7 +8,6 @@ generateTemplateFilesCommandLine([
     },
     stringReplacers: [
       {
-        question: "Insert plugin name (will be followed by 'nissix-')",
         slot: '__name__',
       },
     ],
