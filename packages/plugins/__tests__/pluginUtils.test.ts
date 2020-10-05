@@ -1,4 +1,4 @@
-import { isPackageInstalled } from '../src/pluginUtils'
+import { isPackageInstalled, isTypescriptProject } from '../src/pluginUtils'
 
 describe('isPackageInstalled tests', () => {
   it('Should return false if dependencies are undefined', () => {
@@ -32,5 +32,15 @@ describe('isPackageInstalled tests', () => {
       'packageName',
     )
     expect(actual).toBeTruthy()
+  })
+})
+
+describe('isTypescriptProject tests', () => {
+  it('should return true (because this is a TS project)', async () => {
+    expect(await isTypescriptProject()).toBeTruthy()
+  })
+
+  it('should return false if this is not a TS project', async () => {
+    expect(await isTypescriptProject('~/folderThatDoesntExist')).toBeFalsy()
   })
 })

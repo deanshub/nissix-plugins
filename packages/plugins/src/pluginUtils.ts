@@ -101,3 +101,14 @@ export function isPackageInstalled(dependencies: DependenciesType | Dependencies
     return prev || acc?.hasOwnProperty(packageName);
   }, false);
 }
+
+export async function isTypescriptProject(projectDir: string = process.cwd()) {
+  const paths = await globby(
+      ['tsconfig.json', '**/tsconfig.json', '!node_modules'],
+      {
+          cwd: projectDir,
+      },
+  );
+
+  return !!paths?.length;
+}
