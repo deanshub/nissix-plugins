@@ -14,6 +14,7 @@
     "create": "ts-node scripts/create.ts",
     "test": "lerna run test"
   },
+  "dependencies": {},
   "devDependencies": {
     "cmd-ts": "^0.6.4",
     "execa": "^4.0.3",
