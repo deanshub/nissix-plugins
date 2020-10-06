@@ -11,7 +11,7 @@
     "postinstall": "lerna bootstrap",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "create": "node scripts/bin.js",
+    "create": "ts-node scripts/create.ts",
     "test": "lerna run test"
   },
   "devDependencies": {
@@ -21,6 +21,7 @@
     "husky": "^4.3.0",
     "lerna": "^3.22.1",
     "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   }
 }

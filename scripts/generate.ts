@@ -1,16 +1,16 @@
-const { generateTemplateFilesCommandLine } = require('generate-template-files')
+import {
+  generateTemplateFilesCommandLine,
+  CaseConverterEnum,
+} from 'generate-template-files'
+
 generateTemplateFilesCommandLine([
   {
     option: 'Create plugin',
-    defaultCase: '(lowercase)',
+    defaultCase: CaseConverterEnum.LowerCase,
     entry: {
       folderPath: './scripts/template/',
     },
-    stringReplacers: [
-      {
-        slot: '__name__',
-      },
-    ],
+    stringReplacers: ['__name__'],
     output: {
       path: './plugins/__name__/',
       overwrite: true,
