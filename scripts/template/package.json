@@ -1,0 +1,14 @@
+{
+  "name": "nissix-__name__",
+  "version": "1.0.0",
+  "description": "__name__ a plugin for Nissix ",
+  "bin": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "",
+    "watch": "",
+    "clean": "rm -rf dist/",
+    "start": "echo \"starting __name__\" && exit 1"
+  }
+}
