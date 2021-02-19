@@ -1,5 +1,5 @@
 {
-  "name": "nissix-plugins",
+  "name": "@nissix/plugins",
   "version": "1.0.0",
   "description": "Nissix's plugins for scaleable coding",
   "main": "dist/index.js",
